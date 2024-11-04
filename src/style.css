@@ -1,0 +1,9 @@
+#main_window {
+    background-color: lightgreen;
+}
+
+#btn_sip_client, #btn_demo {
+    font-size: 18px;
+    background-color: white;
+    padding: 10px;
+}

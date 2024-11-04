@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.38.2 -->
+<interface>
+  <requires lib="gtk+" version="3.6"/>
+  <object class="GtkImage" id="img_alarm">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="stock">gtk-dialog-warning</property>
+    <!--<property name="icon-name">alarm-symbolic</property> -->
+    <property name="icon_size">5</property>
+  </object>
+  <object class="GtkImage" id="img_call">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="stock">gtk-index</property>
+    <property name="icon_size">5</property>
+  </object>
+  <object class="GtkImage" id="img_play">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="stock">gtk-media-play</property>
+    <property name="icon_size">5</property>
+  </object>
+  <object class="GtkImage" id="img_stop">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="stock">gtk-media-stop</property>
+    <property name="icon_size">5</property>
+  </object>
+  <object class="GtkImage" id="img_cancel">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="stock">gtk-cancel</property>
+    <property name="icon_size">5</property>
+  </object>
+  <object class="GtkImage" id="img_open">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="stock">gtk-go-back</property>
+    <property name="icon_size">5</property>
+  </object>
+  <object class="GtkImage" id="img_close">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="stock">gtk-go-forward</property>
+    <property name="icon_size">5</property>
+  </object>
+  <object class="GtkWindow" id="main_window">
+    <property name="visible">True</property>
+    <property name="can-focus">False</property>
+    <property name="title" translatable="yes">Tipro Demo</property>
+    <property name="window-position">center-always</property>
+    <property name="hide-titlebar-when-maximized">True</property>
+    <property name="icon-name">network-workgroup</property>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="visible">True</property>
+        <property name="can-focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkIconView" id="icon_view">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="margin">1</property>
+                <property name="selection-mode">none</property>
+                <property name="item-orientation">horizontal</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkStatusbar" id="status_bar">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="double-buffered">False</property>
+                <property name="margin-left">5</property>
+                <property name="margin-right">5</property>
+                <property name="margin-start">5</property>
+                <property name="margin-end">5</property>
+                <property name="margin-top">1</property>
+                <property name="margin-bottom">1</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">2</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+                <property name="padding">15</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="pack-type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_quit">
+            <property name="label">QUIT</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">img_cancel</property>
+            <property name="always-show-image">True</property>
+            <signal name="clicked" handler="h_quit" swapped="no"/>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="padding">5</property>
+            <property name="pack-type">end</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_camera">
+            <property name="label" translatable="yes">Play Music</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">img_play</property>
+            <property name="always-show-image">True</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="padding">5</property>
+            <property name="pack-type">end</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_alarm">
+            <property name="label" translatable="yes">Sound Alarm</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">img_alarm</property>
+            <property name="always-show-image">True</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="padding">5</property>
+            <property name="pack-type">end</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_doors">
+            <property name="label" translatable="yes">Open Doors</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">img_open</property>
+            <property name="always-show-image">True</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="padding">5</property>
+            <property name="pack-type">end</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_call">
+            <property name="label" translatable="yes">Call</property>
+            <property name="visible">True</property>
+            <property name="can-focus">True</property>
+            <property name="receives-default">True</property>
+            <property name="image">img_call</property>
+            <property name="always-show-image">True</property>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="padding">5</property>
+            <property name="pack-type">end</property>
+            <property name="position">5</property>
+          </packing>
+        </child>
+        <child>
+          <!-- n-columns=2 n-rows=2 -->
+          <object class="GtkGrid">
+            <property name="visible">True</property>
+            <property name="can-focus">False</property>
+            <child>
+              <object class="GtkImage" id="tipro_logo_image">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="xpad">20</property>
+                <property name="icon-name">computer</property>
+                <property name="icon_size">6</property>
+              </object>
+              <packing>
+                <property name="left-attach">0</property>
+                <property name="top-attach">0</property>
+                <property name="height">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="main_label">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="xpad">20</property>
+                <property name="label">Tipro BF03</property>
+                <attributes>
+                  <attribute name="font-desc" value="LiberationSans Regular 20"/>
+                </attributes>
+              </object>
+              <packing>
+                <property name="left-attach">1</property>
+                <property name="top-attach">0</property>
+                <property name="height">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="padding">5</property>
+            <property name="position">6</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

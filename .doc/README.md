@@ -12,7 +12,7 @@ The compiled code is then copied into the container, in the `torizon_app_root` (
 The task that has the entire pipeline of executed tasks, from the first step to the last step before the debugging, is the `deploy-torizon-\${architecture}` task.
 
 Finally, remote debugging is performed by attaching to the GDB on the running container on the device using a [VSCode feature called Pipe Transport](https://code.visualstudio.com/docs/cpp/pipe-transport). For local debugging, the [VSCode method for C/C++ Debugging](https://code.visualstudio.com/docs/cpp/launch-json-reference) is used. The tasks that perform the debugging are those present in the `launch.json` file.
-
+ 
 The source code of the template is a simple Hello World (Hello Torizon, actually) in C++, using Makefile as build system.
 
 ## Makefile Tools (Extension) Pop-up Message

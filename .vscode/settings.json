@@ -1,8 +1,8 @@
 {
-    "torizon_psswd": "",
-    "torizon_login": "",
-    "torizon_ip": "",
-    "host_ip": "",
+    "torizon_psswd": "tipro",
+    "torizon_login": "torizon",
+    "torizon_ip": "192.168.22.175",
+    "host_ip": "192.168.22.184",
     "torizon_workspace": "${workspaceFolder}",
     "torizon_debug_port": "",
     "torizon_debug_ssh_port": "2230",
@@ -10,10 +10,19 @@
     "terminal.integrated.defaultProfile.linux": "bash",
     "torizon_debug_port3": "",
     "torizon_gpu": "",
-    "torizon_arch": "",
+    "torizon_arch": "armv7l",
     "wait_sync": "1",
     "torizon_run_as": "torizon",
     "torizon_app_root": "/home/torizon/app",
     "tcb.packageName": "GTK-Example",
-    "tcb.version": "3.8.1"
+    "tcb.version": "3.8.1",
+    "docker.environment": {
+        "DOCKER_HOST": "tcp://192.168.22.175:2375",
+        "DEBUG_SSH_PORT": "2222",
+        "DEBUG_PORT1": "2222",
+        "DEBUG_PORT2": "2223",
+        "DEBUG_PORT3": "2224"
+    },
+    "torizon_ssh_port": "22",
+    "makefile.configureOnOpen": true
 }

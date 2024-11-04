@@ -20,9 +20,9 @@ TARGET := $(BIN_PATH)/$(TARGET_NAME)
 TARGET_DEBUG := $(DBG_PATH)/$(TARGET_NAME)
 
 # src files & obj files
-SRC := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.c*)))
-OBJ := $(addprefix $(OBJ_PATH)/, $(addsuffix .o, $(notdir $(basename $(SRC)))))
-OBJ_DEBUG := $(addprefix $(DBG_PATH)/, $(addsuffix .o, $(notdir $(basename $(SRC)))))
+SRC := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.c*) $(addprefix $(x)/*,.css)))
+OBJ := $(addprefix $(OBJ_PATH)/, $(addsuffix .o, $(notdir $(basename $(filter-out %.css, $(SRC))))))
+OBJ_DEBUG := $(addprefix $(DBG_PATH)/, $(addsuffix .o, $(notdir $(basename $(filter-out %.css, $(SRC))))))
 
 # clean files list
 DISTCLEAN_LIST := $(OBJ) \
@@ -38,7 +38,8 @@ default: makedir all
 # non-phony targets
 $(TARGET): $(OBJ)
 	$(CC) $(CCFLAGS) -o $@ $(OBJ) $(LDFLAGS) $(LIBS)
-
+	cp $(SRC_PATH)/demo.ui $(BIN_PATH)
+	
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c*
 	$(CC) $(CCOBJFLAGS) -o $@ $< $(PACKAGE)
 
@@ -47,6 +48,7 @@ $(DBG_PATH)/%.o: $(SRC_PATH)/%.c*
 
 $(TARGET_DEBUG): $(OBJ_DEBUG)
 	$(CC) $(CCFLAGS) $(DBGFLAGS) $(OBJ_DEBUG) -o $@ $(LDFLAGS) $(LIBS)
+	cp $(SRC_PATH)/demo.ui $(DBG_PATH)
 
 # phony rules
 .PHONY: makedir
